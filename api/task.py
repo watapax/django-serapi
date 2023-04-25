@@ -46,7 +46,7 @@ class Scheduler:
                           day_of_week="*",
                           hour="*",
                           minute="*",
-                          second="5,10,15,20,25,30,35,40,45,50,55")
+                          second="30")
 
         scheduler.start()
 

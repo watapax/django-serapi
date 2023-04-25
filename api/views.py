@@ -40,39 +40,17 @@ class LogInView(APIView):
                 # Create License Response
                 response = token
 
-                # Create Error Response
-                response = {
-                    'school' : account.school.name,
-                    'licenses' : {
-                        'total' : account.school.licenses,
-                        'available' : account.school.licenses - 1 - licenses_in_use,
-                        'used' : licenses_in_use + 1
-                    },
-                    'token' : token,
-                    'message' : 'Licenses recerved'
-                }
-
             else:
 
                 # Create Error Response
-                response = {
-                    'school' : account.school.name,
-                    'licenses' : {
-                        'total' : account.school.licenses,
-                        'available' : account.school.licenses - licenses_in_use,
-                        'used' : licenses_in_use
-                    },
-                    'message' : 'All licenses are in use'
-                }
+                response = "full"
 
             return Response(response , status=status.HTTP_200_OK)
         
         except:
             
             # Create Error Response
-            response = {
-                'status' : 'Username does not exist'
-            }
+            response = "no"
 
             return Response( response , status=status.HTTP_200_OK )
 
