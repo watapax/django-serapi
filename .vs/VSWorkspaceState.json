@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\api",
     "\\serapi"
   ],
-  "SelectedNode": "\\serapi\\settings.py",
+  "SelectedNode": "\\serapi\\wsgi.py",
   "PreviewInSolutionExplorer": false
 }
